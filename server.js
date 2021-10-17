@@ -7,14 +7,12 @@ import productRouter from "./SERVER/Router/productrouter.js";
 import adminRouter from "./SERVER/Router/adminRouter.js";
 import categoryRouter from "./SERVER/Router/categoryRouter.js";
 import dotenv from "dotenv";
-import multer from "multer"
+import multer from "multer";
+import bodyParser from "body-parser"
 
-
- import bodyParser from "body-parser"
 
  dotenv.config({path:'.env'});
  const app=express();
- app.use(bodyParser.urlencoded({ extended: false }))
  app.use(bodyParser.json());
  app.set("view engine", "ejs");
 
