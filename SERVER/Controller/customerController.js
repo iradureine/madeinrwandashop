@@ -1,4 +1,4 @@
-import customerInfo from "../Model/customermodel";
+import customerInfo from "../Model/customermodel.js";
 import TokenAuth from "../helper/tokenAuth.js"
 import bcrypt from "bcrypt"
 

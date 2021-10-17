@@ -1,4 +1,4 @@
-import productInfo from "../Model/productmodel";
+import productInfo from "../Model/productmodel.js";
 
 class Productcontroller{
 static register=async (req,res)=>{
