@@ -1,5 +1,5 @@
 import express from "express"
-import ProductController from "../Controller/productcontroller";
+import ProductController from "../Controller/productController.js";
 import multer from "multer";
 
 const storage = multer.diskStorage({
