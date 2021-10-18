@@ -1,4 +1,4 @@
-
+import cors from "cors";
 import express  from "express";
 import  mongoose from "mongoose";
 import customerRouter from "./SERVER/Router/customerRouter.js";
@@ -13,6 +13,7 @@ import bodyParser from "body-parser"
 
  dotenv.config({path:'.env'});
  const app=express();
+ app.use(cors());
  app.use(bodyParser.json());
  app.set("view engine", "ejs");
 
