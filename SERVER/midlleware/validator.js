@@ -19,7 +19,7 @@ class Validator{
     static newAccountRules(){
         return[
           
-          check("FirstName", "please your firstname have special character").isAlpha(),
+          //check("FirstName", "please your firstname have special character").isAlpha(),
           check("LastName","please your firstname have special character").isAlpha(),
           check("Email","please your email is invalid").isEmail(),
           check("gender","gender is invalid").isIn(['male','female']),

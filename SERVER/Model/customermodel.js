@@ -23,9 +23,9 @@ const CustomerSchema= new mongoose.Schema({
 
         },
         Role:{
-            type:String
-            //enum:["client","supplier","admin"],
-            //default:["client"]
+            type:String,
+            enum:["client","supplier","admin"],
+            default:"client"
 
         }
 

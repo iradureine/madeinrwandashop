@@ -4,7 +4,7 @@ import  mongoose from "mongoose";
 import customerRouter from "./SERVER/Router/customerRouter.js";
 import orderRouter from "./SERVER/Router/orderRouter.js"
 import productRouter from "./SERVER/Router/productrouter.js";
-import adminRouter from "./SERVER/Router/adminRouter.js";
+
 import categoryRouter from "./SERVER/Router/categoryRouter.js";
 import dotenv from "dotenv";
 import multer from "multer";
@@ -37,7 +37,7 @@ app.post("/upload", upload.single("profile"),(req,res)=>{
 
  app.use("/madeinrwandashop/v1/order",orderRouter);
 app.use("/madeinrwandashop/v1/product",productRouter);
- app.use("/madeinrwandashop/v1/admin",adminRouter);
+ 
  app.use("/madeinrwandashop/v1/category",categoryRouter);
 
  app.use('/',(req,res)=>{
