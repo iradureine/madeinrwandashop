@@ -10,33 +10,25 @@ productImage:
 Price:{
     type:Number,
 },
-Category:{
-   type:mongoose.Schema.ObjectId,
-  ref:"Category"
 
-},
-Admin:{
-    type:mongoose.Schema.ObjectId,
-    ref:"Admin"
 
-},
 nberOfProduct:{
     type:Number
 },
 });
 
-productSchema.pre(/^find/, function(next){
-    this.populate({
-        path:"Admin",
-        select:"Name email"
-    }).populate({
-        path:"Category",
-        select:"name description"
+//productSchema.pre(/^find/, function(next){
+    //this.populate({
+        //path:"Admin",
+        //select:"Name email"
+    //}).populate({
+       // path:"Category",
+        //select:"name description"
 
-    });
+   // });
 
-    next();
-})
+    //next();
+//})
 const productInfo=mongoose.model("Product",productSchema);
 
 export default productInfo;
