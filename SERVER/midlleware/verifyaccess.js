@@ -1,7 +1,7 @@
 const verifyAccess = function(requiredRole){
     return async(req,res,next)=>{
         try{
-            const role = req.Customer.Role;
+            const Role = req.Customer.Role;
             if(requiredRole !== Role){
                 return res.status(403).json({
                     status:403,

@@ -9,7 +9,7 @@ const verifyToken=async(req,res,next)=>{
         })
     }
 try{
-    const user=TokenAuth.getDataFromToken(token);
+    const Customer=TokenAuth.getDataFromToken(token);
     req.Customer=Customer;
     return next(); 
 }
