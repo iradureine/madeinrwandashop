@@ -5,7 +5,7 @@ const verifyAccess = function(requiredRole){
             if(requiredRole !== Role){
                 return res.status(403).json({
                     status:403,
-                    message:"you are not authorized"
+                    message:"you are not authorized to access"
                 })
             }
             return next();
