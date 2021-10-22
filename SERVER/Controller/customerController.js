@@ -37,6 +37,7 @@ static login=async (req,res)=>{
         const token =TokenAuth.tokenGenerator({
         id:customer._id,
         Email:customer.Email,
+        Role:customer.Role
         
     })
     
@@ -53,7 +54,7 @@ return res.status(404).json({
 })
 }
 static getallcustomer=async(req,res)=>{
-    const customer=await customerInfo.find({Role:"client"});
+    const customer=await customerInfo.find({Role:"Customer"});
      if (!customer){
          return res.status(404).json({
              status:404,
