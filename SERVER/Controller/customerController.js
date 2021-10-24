@@ -58,9 +58,7 @@ static getallcustomer=async(req,res)=>{
      if (!customer){
          return res.status(404).json({
              status:404,
-             message:"failed",
-             data:customer
-
+             message:"failed"
          })
          
      }
