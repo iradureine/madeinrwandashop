@@ -13,4 +13,6 @@ customerRouter.post("/signup", Customercontroller.signup);
 customerRouter.post("/login",Customercontroller.login);
 customerRouter.get("/allcustomer",verifyToken,verifyAccess("admin"),Customercontroller.getallcustomer);
 customerRouter.get("/:id",Customercontroller.getonecustomer);
+
+
 export default customerRouter;

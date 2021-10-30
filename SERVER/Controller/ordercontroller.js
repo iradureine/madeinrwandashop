@@ -17,6 +17,22 @@ class orderController{
             data:order
         })
     }
+    static getallorder = async(req,res)=>{
+        const order= await orderInfo.find({Customer:req.Customer.id});
+        if(!order){
+            return res.status(404).json({
+                status:404,
+                message:"failed"
+            })
+
+        }
+        return res.status(200).json({
+            status:200,
+            message:"successfully",
+            data:order
+
+        })
+    }
 
 }
 
